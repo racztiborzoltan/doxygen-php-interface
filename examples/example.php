@@ -49,7 +49,7 @@ if (isset($_POST['submit'])){
         'PATTERN_3',
     ));
 
-    $doxygen = new Doxygen('P:\PortableApps\doxygen\doxygen.exe', $config);
+    $doxygen = new Doxygen($_POST['doxygen_path'], $config);
     $doxygen->run();
 
     $output = $doxygen->getFullCommandOutput();
