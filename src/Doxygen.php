@@ -44,9 +44,14 @@ class Doxygen
         return $this;
     }
 
+    protected function _getTempConfigFilePath()
+    {
+        return tempnam(null, 'doxygen_temp_config-');;
+    }
+
     private function _create_temp_config_file()
     {
-        $this->temp_config_file_path = tempnam(null, 'doxygen_temp_config-');
+        $this->temp_config_file_path = $this->_getTempConfigFilePath();
         file_put_contents($this->temp_config_file_path, (string)$this->config);
         return $this->temp_config_file_path;
     }
