@@ -1,6 +1,6 @@
 {
 	"name": "racztiborzoltan/doxygen-php-interface",
-	"license": "BSD",
+	"license": "MIT",
 	"description": "Small and very simple Doxygen interface for PHP",
 	"authors": [
 		{
